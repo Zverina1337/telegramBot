@@ -24,6 +24,7 @@ const Form = () => {
     
     return (
         <div className='form'>
+            Form
             <h3>Введите ваши данные:</h3>
             <input className={'input'} type="text" placeholder='Страна' onChange={(e) => setCountry(e.target.value)} value={country}/>
             <input className={'input'} type="text" placeholder='Улица' onChange={(e) => setStreet(e.target.value)} value={street}/>

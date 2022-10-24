@@ -21,7 +21,7 @@ function App() {
                 <Route index element={<ProductList/>}/>
                 <Route path={'form'} element={<Form/>}/>
             </Routes> */}
-            {window.Telegram.WebApp.initDataUnsafe.user}
+            {window.Telegram.WebApp.initDataUnsafe.user.username}
         </div>
     );
 }

@@ -2,7 +2,7 @@ require('dotenv').config()
 const TelegramBot = require('node-telegram-bot-api');
 
 const token = process.env.TOKEN;
-const webAppUrl = 'https://ya.ru/'
+const webAppUrl = 'https://silver-blini-c51d6a.netlify.app/'
 const bot = new TelegramBot(token, {polling: true});
 
 
@@ -11,14 +11,6 @@ bot.on('message', async (msg) => {
     const text = msg.text;
 
     if(text === "/start"){
-        await bot.sendMessage(chatId, 'Ниже появится кнопка заполни форму', {
-            reply_markup: {
-                keyboard: [
-                    [{text: 'Заполнить форму'}]
-                ]
-            }
-        });
-
         await bot.sendMessage(chatId, 'Ниже появится кнопка заполни форму', {
             reply_markup: {
                 inline_keyboard: [
